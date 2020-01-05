@@ -1,0 +1,297 @@
+/*Статья про обнуление https://medium.com/@stasonmars/%D1%81%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B8%CC%86-%D1%81%D0%B1%D1%80%D0%BE%D1%81-css-f5816963c82b*/
+/*Обнуление*/
+
+/*Делить страницу на блоки - создаю контейнеры и либо указываю высоту контентом, либо vh (на всю страницу), и крайне редко px*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;} /*Всё в блоки, для лучшей вёрстки*/
+body{
+	display: flex;
+	flex-direction: column;
+}
+
+html,body{ /*Привожу все шрифты к одному стилю*/
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	
+	font-family: Lato;
+
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;} /*Наследую настройки шрифтов для данных элементов, потому что это не происходит автоматически*/
+
+input::-ms-clear{display: none;} /*Убираю кастомы разных браузеров по умолчанию*/
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+a{text-decoration: none;}
+ul li{list-style: none;}
+li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;} /*Всё заголовки "в ноль", для перестройки под макет"
+/*--------------------*/
+
+
+/* === Breack-point (screen resolution) === */
+/* Так много точек только по тому, что у макета не было изначально мобильной и планшетной версии. Иначе, хватило бы 4 стандартных
+
+1200px
+1100px
+860px
+768px
+600px
+525px
+400px
+360px
+*/
+
+/* === Breack-point (screen resolution) (end)  === */
+
+
+/* === Header  === */
+.header{
+	width: 100%;
+	position: absolute; /*Два варианта: либо абсолютное позиционирование для того, что бы выпал из "потока" и не учитывался в высоте иннера (для vh100), либо включить его сразу в inner*/
+	top: 0;
+	left: 0;
+	right: 0;
+} 
+
+	.header__inner{
+		display: flex;
+		justify-content: space-between;
+		align-items : center;
+	}
+		.header__logo{
+			font-size: 38px;
+			font-weight: 700;
+			color: #000;
+			margin-top: 90px;
+			margin-left: 10px;
+			border: 3px solid #170c1f;
+			border-radius: 2px;
+			padding: 8px 15px;
+			opacity: 0.6;
+		}
+			.header__logo_first-letter{
+				
+				opacity: 0.6;
+				color: #fc6744;
+				font-family: "Open Sans";
+				font-weight: 600;
+			}
+		
+		/* кастомизация ссылок*/
+		.header-navigation{
+			margin-right: 10px;
+		}
+			.header-navigation__item{
+				display: inline-block;
+				color: white;
+				text-transform: uppercase;
+				padding:15px 15px;
+				position: relative; /*ради того, что бы от него отсчитывать координаты полоски подчёркивания*/
+			}
+			.header-navigation__item_active{
+				color: black;
+				font-size: 20px;
+				font-weight: 900;
+				border: #fce38a 1px solid;
+			}
+
+			@media (max-width: 768px) {
+				.header-navigation__item{
+					padding:5px 5px;
+				}
+			}
+
+			.header-navigation__item:after{ /*создаю подчёркивающий элемент под ссылками, но пока отключаю*/
+				content: "";
+				display: block;
+				width: 100%;
+				height: 3px;
+				background-color: #fce38a;
+				position: absolute; /* без него строка будет прыгать*/
+				top: 100%; 
+				left: 0;
+				right: 0;
+				opacity: 0;/*видимость этого блока*/
+				transition: opacity .2s linear;
+			}
+			.header-navigation__item:hover{  /*меняю только цвет*/
+				
+				color: #fce38a;
+				transition: color .2s linear;
+			}
+			.header-navigation__item:hover:after{/*так же включаю видимость у блока с подчёркиванием*/
+				opacity: 1;
+			}
+
+/* === General elements  === */
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	background-color: #f5f5f5;
+}
+
+.container{
+	width: 100%; /*всегда на всю ширину экрана, кроме..*/
+	max-width: 1140px; /*когда он становится шире 1200. На этом край*/
+	margin: 0 auto; /*выравнил по центру*/
+	padding: 0 2%; 
+	text-align: center; 
+}
+
+.title {
+	display: block;
+	opacity: 0.94;
+	color: #000000;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 50px;
+	font-weight: 600;    
+	margin-bottom: 26px; 
+	margin-top: 140px; 
+	opacity: 0.8;
+}
+	.first-word {
+		color: #fc6744;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;              
+	}
+.sub-title {
+	display: block;
+	opacity: 0.65;
+	color: #000000;
+	font-family: 'Open Sans';
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 25px;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 700px;
+	margin-bottom: 115px;
+}
+
+.text{	
+	color: #ffffff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 25px;
+	opacity: 0.9;
+}
+
+
+/* === intro  === */
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.intro {
+	min-height: 100vh;	
+}
+    .intro__container {
+    }
+        .intro__title {
+			margin-top:290px;
+			color: #626262;
+        }
+        .intro__send-message-form{
+			width: 300px;
+			height: 350px;
+			background-color: #ffffff;
+			position: absolute;
+			bottom: 0;
+			box-shadow: 0 0 15px rgba(0,0,0,0.3);
+		}            
+      
+/* === working  === */
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/     
+.working {
+    
+	background-color: white;
+	
+}
+    .working__container {
+		margin-bottom: 180px;
+    }
+    
+        .working__gallery {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+        }
+            .working__gallery-item {
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content:space-evenly;
+				padding: 5px;
+				flex-basis: 200px;
+				margin: 0 10px;
+				box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.22);
+				margin-bottom: 70px;
+				flex-grow: 1;
+			}
+			.gallery-item_1{
+				background-color: #4eb2f7;
+			}
+			.gallery-item_2{
+				background-color: #c049f8;
+			}
+			.gallery-item_3{
+				background-color: #817eff;
+			}
+			.gallery-item_4{
+				background-color: #f74770;
+			}
+                .gallery-item__img {
+					width: fit-content;
+					display: block;
+					margin-top: 55px;
+					margin-bottom: 20px;
+                }
+                .gallery-item__title {
+					margin-bottom: 20px;
+					font-size: 20px;
+                }
+                .gallery-item__sub-title {
+					margin-bottom: 60px;
+					opacity: 0.75;
+				}
+				.gallery-item__button{
+					display: flex;
+					min-width: 80%;
+					min-height:20%;
+					background-color: white;
+					border-radius: 530px;
+					align-items: center;
+					justify-content: center;
+					
+					color: #000000;
+					font-family: "Open Sans";
+					font-size: 16px;
+					font-weight: 400;
+					line-height: 25px;
+					box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+				}

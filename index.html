@@ -1,0 +1,134 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="en">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Smart Agency LP</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="style.css" />
+	<!--Подключаем шрифты-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i&display=swap" rel="stylesheet">
+	<!-- Кодировка страницы -->
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<!--Ошибки:
+Для адаптивной вёрстки нужно использовать не только px и %.
+
+Так же, из-за того что изначально макет не учитывал мобильной вёрстки, а был рассчитан только на десктопы, возникли трудности с вёрсткой на стандартных breack-point-ах, пришлось добавлять ещё несколько (по этому, так велико их количество).
+
+Несмотря на высокий уровень вложенности элементов, нельзя тащить в имена их иерархию. 
+
+До конца не смог удержать "уровень" в проекте, и под конец в паре мест включил костыли.
+
+Для разных разрешений следует подтягивать изображения со своим разрешением.
+
+В CSS, для лучшего визуального восприятия, лучше поддерживать форматирование с отступами дочерних классов, показывающее включение дочерних элементов (в Sass есть похожее, но препроцессоры буду использовать только в следующем проекте).
+
+Так же, на данном этапе в приоритете научится правильной раскладке элементов на странице и семантике отдаётся меньшее внимание (приоритет временно смещён). Знаю что каждый элемент должен оборачиваться в свой, наиболее подходящий тег, в списки и семантически полноценные блоки article, section, aside
+-->
+
+<!-- Отображаемое тело страницы -->
+<body>
+	<header class="header"> <!--  -->
+		<div class="header__container container">
+			<div class="header__inner">
+				<div class="header__logo"><span class="header__logo_first-letter">S</span>mart</div>
+				<nav class="header-navigation">
+					<a href="#" class="header-navigation__item">menu-burger</a>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<section class="intro">
+		<div class="intro__container container">
+
+		
+
+			<span class="intro__title title">
+				<span class="first-word">Smart</span>  Agency Landign Page
+			</span>
+			<span class="intro__sub-title sub-title">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, fuga provident. Libero magni quibusdam labore ad iste saepe hic, maxime qui ipsum tempore beatae, volu tomi ptates        doloremque rerum aspernatur dolorum at!
+			</span>
+			<aside class="intro__send-message-form">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolorem illum iure magnam voluptatem dolore exercitationem cumque eaque distinctio, a consequatur amet voluptatum quod officiis nostrum qui culpa id! Omnis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint rerum tenetur cupiditate ipsam aliquid omnis doloribus ut est reiciendis, necessitatibus possimus ipsum quisquam vero maiores, voluptatem qui beatae tempora vel.
+			</aside>
+		</div>
+	</section>
+
+	<section class="working">
+		<div class="working__container container">
+
+			<span class="working__title title">
+				<span class="first-word">working</span>  Process
+			</span>
+			<span class="working__sub-title sub-title">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, fuga provident. Libero magni quibusdam labore ad iste saepe hic
+			</span>
+			<div class="working__gallery">
+				<div class="working__gallery-item gallery-item_1">
+					<img src="assets/img/working__gallery-item_img_1.png" alt="img-1" class="gallery-item__img">
+					<span class="gallery-item__title text">
+						Koc Koi Tomi
+					</span>
+					<span class="gallery-item__sub-title text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					</span>
+					<a href="#" class="gallery-item__button">
+						 	+ Know More	
+					</a>
+				</div>
+				<div class="working__gallery-item gallery-item_2">
+					<img src="assets/img/working__gallery-item_img_1.png" alt="img-1" class="gallery-item__img">
+					<span class="gallery-item__title text">
+						Koc Koi Tomi
+					</span>
+					<span class="gallery-item__sub-title text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					</span>
+					<a href="#" class="gallery-item__button">
+						+ Know More	
+			   </a>
+				</div>
+				<div class="working__gallery-item gallery-item_3">
+					<img src="assets/img/working__gallery-item_img_1.png" alt="img-1" class="gallery-item__img">
+					<span class="gallery-item__title text">
+						Koc Koi Tomi
+					</span>
+					<span class="gallery-item__sub-title text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					</span>
+					<a href="#" class="gallery-item__button">
+						+ Know More	
+			   </a>
+				</div>
+				<div class="working__gallery-item gallery-item_4">
+					<img src="assets/img/working__gallery-item_img_1.png" alt="img-1" class="gallery-item__img">
+					<span class="gallery-item__title text">
+						Koc Koi Tomi
+					</span>
+					
+					<span class="gallery-item__sub-title text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					</span>
+					<a href="#" class="gallery-item__button">
+						+ Know More	
+			   </a>
+				</div>
+			</div>
+			
+
+		</div>
+	</section>
+
+	
+	
+</body>
+
+</html> 
