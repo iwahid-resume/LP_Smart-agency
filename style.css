@@ -295,3 +295,15 @@ body{
 					line-height: 25px;
 					box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 				}
+
+/* === featured  === */
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/     
+.featured__gallery{
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 171px;
+}
+
+.featured-item{
+	margin: 5px;
+}
