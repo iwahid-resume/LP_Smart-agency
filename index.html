@@ -11,6 +11,9 @@
 	<link rel="stylesheet" href="style.css" />
 	<!--Подключаем шрифты-->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<!-- Кодировка страницы -->
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,7 +65,9 @@
 		</div>
 	</section>
 
-	<section class="working">
+	<!-- чётные секции этого лендинга белые, а не чётные серые. Обычно, каждой из секции я присваиваю цвет в CSS, но можно пойти и от обратного, создав единый class="white", присвоив ему белый цвет в CSS и добавляя его к необходимым секциям уже в html. Или всем чётным дочерним элементам body устанавливать фон белым. Подходов и принципов много, и это лишь пояснение о том, что они есть и я о них знаю.-->
+
+	<section class="working"> 
 		<div class="working__container container">
 
 			<span class="working__title title">
@@ -249,12 +254,30 @@
 			<div class="team__gallery">
 
 				
-				<div class="team__gallery-item">
+				<div id="expert_1" class="team__gallery-item">
 					<img src="https://placebeard.it/360x445" alt="" class="team__img">
 					<div class="team__img-cover">
 						
 						<span class="cover__expert-profession">UI/UX Parena</span>
 						<span class="cover__expert-name">Bedi Manos</span>
+						<div class="cover__expert-skills">
+
+							<span class="skills-item__label">Communication</span>
+							<div class="skills-item__progress-bar">
+								<div class="skills-item__progress-bar_current_1"></div>
+							</div>
+
+							<div class="skills-item__label">English</div>
+							<div class="skills-item__progress-bar">
+								<div class="skills-item__progress-bar_current_2"></div>
+							</div>
+
+							<div class="skills-item__label">UI/UX  Design</div>
+							<div class="skills-item__progress-bar">
+								<div class="skills-item__progress-bar_current_3"></div>
+							</div>
+
+						</div>
 
 					</div>
 
@@ -265,15 +288,73 @@
 					
 				</div>
 				
-				<div class="team__gallery-item">
+				<div id="expert_2" class="team__gallery-item">
 					<img src="https://placebeard.it/361x445" alt="" class="team__img">
-					<div class="team__img-cover"></div>
-					
-				</div>
+					<div class="team__img-cover">
 
-				<div class="team__gallery-item">
+						<span class="cover__expert-profession">UI/UX Designer</span>
+						<span class="cover__expert-name">Al Rayhan</span>
+						<div class="cover__expert-skills">
+
+							<span class="skills-item__label">Communication</span>
+							<div class="skills-item__progress-bar">
+								<div class="skills-item__progress-bar_current_1"></div>
+							</div>
+
+							<div class="skills-item__label">English</div>
+							<div class="skills-item__progress-bar">
+								<div class="skills-item__progress-bar_current_2"></div>
+							</div>
+
+							<div class="skills-item__label">UI/UX  Design</div>
+							<div class="skills-item__progress-bar">
+								<div class="skills-item__progress-bar_current_3"></div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="team__expert">
+						<span class="team__expert-name">Al Rayhan</span>
+						<span class="team__expert-profession">UI/UX Designer</span>
+
+					</div>
+					
+				</div id="expert_2">
+
+				<div  id="expert_3" class="team__gallery-item">
 					<img src="https://placebeard.it/359x445" alt="" class="team__img">
-					<div class="team__img-cover"></div>
+					<div class="team__img-cover">
+
+						<span class="cover__expert-profession">UI/UX Designer</span>
+						<span class="cover__expert-name">Ali Sayed</span>
+						<div class="cover__expert-skills">
+
+							<span class="skills-item__label">Communication</span>
+							<div class="skills-item__progress-bar">
+								<div class="skills-item__progress-bar_current_1"></div>
+							</div>
+
+							<div class="skills-item__label">English</div>
+							<div class="skills-item__progress-bar">
+								<div class="skills-item__progress-bar_current_2"></div>
+							</div>
+
+							<div class="skills-item__label">UI/UX  Design</div>
+							<div class="skills-item__progress-bar">
+								<div class="skills-item__progress-bar_current_3"></div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="team__expert">
+						<span class="team__expert-name">Ali Sayed</span>
+						<span class="team__expert-profession">UI/UX Designer</span>
+
+					</div>
 					
 				</div>
 				
@@ -281,8 +362,53 @@
 			</div>
 			
 		</div>
+	</section> <!-- === team (end) === --> 
+	<section class="clients">
+		<div class="clients__container container">
+			<span class="clients__title title">
+				<span class="first-word">Featured</span>  Works
+			</span>
+			<span class="clients__sub-title sub-title">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, fuga provident.
+			</span>
+
+			<div class="clients__gallery">
+				<div class="clients-gallery__review">
+					<span class="review__text">“This was my first time renting from car rental. The service rep help me find the best rental to suit my needs. I will definitely rent with this company again. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, maiores alias. Fugit aspernatur voluptas deserunt, accusamus tempore ullam commodi, esse adipisci vero voluptatum quisquam culpa iusto ipsa illum ad cum! ”</span>
+					
+					<div class="review__author-rate">
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-star-half-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+					</div>
+
+					<span class="review__author-name">Kita Say,</span>
+					<span class="review__author-profession">HK Director</span>
+
+				</div>
+				<div class="clients-gallery__review">
+					<span class="review__text">“Ужасно, ужаасно! БЕМ-нейминг соблюдается с большим трудом из-за высокой вложенности блоков. С семантикой, конечно, не все так плохо, но над качеством кода ещё нужно поработать. За то в плане адаптивности явно виден прогресс. Хотя макет изначально и не был свёрстан под меньшие экраны, но конечный результат адаптивности всё равно радует ”</span>
+					
+					
+					
+					<div class="review__author-rate">
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-star-half-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+					</div>
+					
+					<span class="review__author-name">Al Rayhan,</span>
+					<span class="review__author-profession">UX Director</span>
+
+				</div>
+			</div>
+			
+		</div>
 	</section>
-	
 	
 </body>
 

@@ -321,106 +321,109 @@ body{
 
 /* === services  === */
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/     
-.services__internals{
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	width: 100%;
-	position: relative;
-	margin-bottom: 185px;
+.services{
+	background-color: #ffffff;
 }
-	.services__internals-item_1, .services__internals-item_2, .services__internals-item_3, .services__internals-item_4{
-		margin: 5px;
+	.services__internals{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
 		position: relative;
-	}	
-		.internal-item__container_1, .internal-item__container_2,.internal-item__container_3, .internal-item__container_4 {
-			position: absolute;
-			top: 0;
-			left:calc(45px + 12%);
-			max-width: 50%;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			opacity: 0;
-
-		}
-			.internals__title{
-				position: relative;
-				opacity: 0.75;
-				color: #000000;
-				font-family: "Open Sans";
-				font-size: 30px;
-				font-weight: 400;
-				line-height: 45.74px;
-			}
-				.internals__title:after{
-					position: absolute;
-					content:"";
-					top: 60px;
-					left: 0;
-					width: 57px;
-					height: 3px;
-					background-color: #ff5c36;
-				}
-			.internals__description{
-				text-align: left;
-				display: block;
-				
-				color: #000000;
-				font-family: "Open Sans";
-				font-size: 16px;
-				font-weight: 400;
-				line-height: 25px;
-				margin-top: 30px;
-				margin-bottom: 30px;
-			}
-			
-			.internal-item__button{
-				display: block;
-				padding: 15px 50px;
-				background-color: white;
-				border-radius: 530px;
-				align-items: center;
-				justify-content: center;
-				
-				color: #000000;
-				font-family: "Open Sans";
-				font-size: 16px;
-				font-weight: 400;
-				line-height: 25px;
-				box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-			}
-			.internal__content-image{
+		margin-bottom: 185px;
+	}
+		.services__internals-item_1, .services__internals-item_2, .services__internals-item_3, .services__internals-item_4{
+			margin: 5px;
+			position: relative;
+		}	
+			.internal-item__container_1, .internal-item__container_2,.internal-item__container_3, .internal-item__container_4 {
 				position: absolute;
 				top: 0;
-				right:0;
-				width: 30%;
-			}
-			.services__internals-item_1:hover{
-				box-shadow: 0  0 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-			}
-			.services__internals-item_2:hover{
-				box-shadow: 0  0 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-			}
-			.services__internals-item_3:hover{
-				box-shadow: 0  0 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-			}
-			.services__internals-item_4:hover{
-				box-shadow: 0  0 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-			}
+				left:calc(45px + 12%);
+				max-width: 50%;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				opacity: 0;
 
-				.services__internals-item_1:hover ~  .internal-item__container_1{
-					opacity: 1;
+			}
+				.internals__title{
+					position: relative;
+					opacity: 0.75;
+					color: #000000;
+					font-family: "Open Sans";
+					font-size: 30px;
+					font-weight: 400;
+					line-height: 45.74px;
 				}
-				.services__internals-item_2:hover ~  .internal-item__container_2{
-					opacity: 1;
+					.internals__title:after{
+						position: absolute;
+						content:"";
+						top: 60px;
+						left: 0;
+						width: 57px;
+						height: 3px;
+						background-color: #ff5c36;
+					}
+				.internals__description{
+					text-align: left;
+					display: block;
+					
+					color: #000000;
+					font-family: "Open Sans";
+					font-size: 16px;
+					font-weight: 400;
+					line-height: 25px;
+					margin-top: 30px;
+					margin-bottom: 30px;
 				}
-				.services__internals-item_3:hover ~  .internal-item__container_3{
-					opacity: 1;
+				
+				.internal-item__button{
+					display: block;
+					padding: 15px 50px;
+					background-color: white;
+					border-radius: 530px;
+					align-items: center;
+					justify-content: center;
+					
+					color: #000000;
+					font-family: "Open Sans";
+					font-size: 16px;
+					font-weight: 400;
+					line-height: 25px;
+					box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 				}
-				.services__internals-item_4:hover ~  .internal-item__container_4{
-					opacity: 1;
+				.internal__content-image{
+					position: absolute;
+					top: 0;
+					right:0;
+					width: 30%;
 				}
+				.services__internals-item_1:hover{
+					box-shadow: 0  0 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+				}
+				.services__internals-item_2:hover{
+					box-shadow: 0  0 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+				}
+				.services__internals-item_3:hover{
+					box-shadow: 0  0 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+				}
+				.services__internals-item_4:hover{
+					box-shadow: 0  0 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+				}
+
+					.services__internals-item_1:hover ~  .internal-item__container_1{
+						opacity: 1;
+					}
+					.services__internals-item_2:hover ~  .internal-item__container_2{
+						opacity: 1;
+					}
+					.services__internals-item_3:hover ~  .internal-item__container_3{
+						opacity: 1;
+					}
+					.services__internals-item_4:hover ~  .internal-item__container_4{
+						opacity: 1;
+					}
 /* === team  === */
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/     
 .team__gallery{
@@ -430,6 +433,7 @@ body{
 	
 	flex-wrap: wrap;
 	position: relative;
+	margin-bottom: 180px;
 }		
 	.team__gallery-item{
 		display: flex;
@@ -442,7 +446,9 @@ body{
 
 		width: 31%;
 		min-width: 240px;
-		margin: 10px 10px;
+		margin: 30px 10px;
+
+		box-shadow: 0  0 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 
 		position: relative;
 	}
@@ -495,6 +501,102 @@ body{
 				font-weight: 300;
 				line-height: 47.84px;
 			}
+			/*весь фрагмент кода ниже описывает разметку навыков конкретного работника. Может показаться, что здесь излишнее нагромождение, и можно было бы сделать все в разы короче через block:after, но использование стольких классов было необходимо с точки зрения "динамичности" страницы". Что бы в последствии не нудно было лезть в код и в ручную менять процентное соотношение полосок прогресса, а менять через кнопки в админ панели. Да, админ панель в лендинге не нужна в принципе, но целью каждого моего проекта является попытка отобразить как можно больше моих навыков в работе, один из которых - составление структуры для удобного подключения скриптов в будущем.*/
+
+			/*По правилам, комбинация селекторов с использованием id - не самый лучший вариант, и его нужно избегать. Исключение - только в крайних случаях, похоже что это именно тот случай. Через комбинацию вложенности id+class я значительно упрощаю изменение и настройку каждого отдельного блока*/
+
+			/*комбинация селекторов для первого человека*/
+			.cover__expert-skills{
+				width: 100%;
+				margin: 0 auto;
+				margin-bottom: 81px;
+				
+			}
+				.skills-item__label{
+					display: block; /*div итак блок, добавил только ради span*/
+					font-size: 11px;
+					margin-bottom: 7px;
+				}
+				.skills-item__progress-bar{
+					width: 60%;
+					height: 4px;
+					background-color: #626262;
+					margin: 0 auto;
+					position: relative;
+					
+					margin-bottom: 16px;
+				}
+					/*===progress-bar for expert 1===*/
+					#expert_1 .skills-item__progress-bar_current_1{
+						width: 75%;
+						height: 100%;
+						position: absolute;
+						background-color: #ff5c36;
+
+					}
+					#expert_1 .skills-item__progress-bar_current_2{
+						width: 60%;
+						height: 100%;
+						position: absolute;
+						background-color: #ff5c36;
+
+					}
+					#expert_1 .skills-item__progress-bar_current_3{
+						width: 85%;
+						height: 100%;
+						position: absolute;
+						background-color: #ff5c36;
+
+					}
+			
+					/*===progress-bar for expert 2===*/
+					#expert_2 .skills-item__progress-bar_current_1{
+						width: 45%;
+						height: 100%;
+						position: absolute;
+						background-color: #ff5c36;
+
+					}
+					#expert_2 .skills-item__progress-bar_current_2{
+						width: 20%;
+						height: 100%;
+						position: absolute;
+						background-color: #ff5c36;
+
+					}
+					#expert_2 .skills-item__progress-bar_current_3{
+						width: 15%;
+						height: 100%;
+						position: absolute;
+						background-color: #ff5c36;
+
+					}
+
+					/*===progress-bar for expert 3===*/
+					#expert_3 .skills-item__progress-bar_current_1{
+						width: 95%;
+						height: 100%;
+						position: absolute;
+						background-color: #ff5c36;
+
+					}
+					#expert_3 .skills-item__progress-bar_current_2{
+						width: 45%;
+						height: 100%;
+						position: absolute;
+						background-color: #ff5c36;
+
+					}
+					#expert_3 .skills-item__progress-bar_current_3{
+						width: 15%;
+						height: 100%;
+						position: absolute;
+						background-color: #ff5c36;
+
+					}
+
+
+
 
 
 
@@ -507,6 +609,8 @@ body{
 			background-color: white;
 			border-radius: 3px;
 			padding: 5px;
+
+			box-shadow: 0  0 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 
 			transition: opacity .4s linear;
 			opacity: 1;
@@ -529,3 +633,65 @@ body{
 				font-weight: 300;
 				line-height: 47.84px;
 			}
+
+
+/* === clients  === */
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/  
+.clients{
+	background-color: #ffffff;
+}
+	.clients__gallery{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: 100px;
+	}
+		.clients-gallery__review{
+			width: 45%;
+			padding: 3%;
+			box-shadow: 0  0 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+			margin: 10px;
+		}
+			.review__text{
+				display: block;
+				opacity: 0.7;
+				color: #000000;
+				font-family: 'Source Sans Pro', sans-serif;
+				font-size: 17px;
+				font-weight: 400;
+				line-height: 27px;
+
+			}
+			.review__author-rate{
+				
+				display: block;
+				margin: 20px 0;
+				color: #ffef3b;
+			}
+			.review__author-name{
+				opacity: 0.8;
+				color: #000000;
+				font-family: "Source Sans Pro";
+				font-size: 17px;
+				font-weight: 400;
+				line-height: 27px;
+				font-family: "Source Sans Pro";
+				font-weight: 600;
+			}
+			
+			.review__author-profession{
+				opacity: 0.8;
+				color: #000000;
+				font-family: "Source Sans Pro - It";
+				font-size: 17px;
+				font-weight: 400;
+				line-height: 27px;
+
+				font-family: "Source Sans Pro";
+			}
+			i{
+				
+				font-family: FontAwesome;
+				color: #ffef3b;
+				margin-right: 10px; 
+				}
