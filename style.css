@@ -695,3 +695,18 @@ body{
 				color: #ffef3b;
 				margin-right: 10px; 
 				}
+/* === profiles  === */
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/  
+.profiles{
+	background-color: #fbfbfb;
+}
+	.profiles__gallery{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		padding: 10px;
+		margin: 5% 0;
+	}
+		.profiles__site-logo{
+			margin:10px;
+		}
