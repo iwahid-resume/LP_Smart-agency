@@ -78,13 +78,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;} /*Всё заголовк
 	.header__inner{
 		display: flex;
 		justify-content: space-between;
-		align-items : center;
+		align-items: flex-start;
+		
+		margin-top: 5vh;
 	}
 		.header__logo{
 			font-size: 38px;
 			font-weight: 700;
 			color: #000;
-			margin-top: 90px;
 			margin-left: 10px;
 			border: 3px solid #170c1f;
 			border-radius: 2px;
@@ -103,47 +104,139 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;} /*Всё заголовк
 		.header-navigation{
 			margin-right: 10px;
 		}
-			.header-navigation__item{
-				display: inline-block;
-				color: white;
-				text-transform: uppercase;
-				padding:15px 15px;
-				position: relative; /*ради того, что бы от него отсчитывать координаты полоски подчёркивания*/
+			
+			.menu-wrapper{
+				display: flex;
+				flex-direction: row;
+				margin: 0 auto;
+				width: 50px;
+				background-color: rgba(100,100,100,.9);
+				opacity: 0.7;
+				position: relative;
+				color: red;
+				text-align: center;
+				height: 35px;
+				font-family: 'Arial';
 			}
-			.header-navigation__item_active{
-				color: black;
-				font-size: 20px;
-				font-weight: 900;
-				border: #fce38a 1px solid;
+			
+			#check-menu{
+				 display: none; 
 			}
-
-			@media (max-width: 768px) {
-				.header-navigation__item{
-					padding:5px 5px;
-				}
+			
+			label{
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				cursor: pointer;
+				z-index: 2;
+				line-height: 40px;
 			}
-
-			.header-navigation__item:after{ /*создаю подчёркивающий элемент под ссылками, но пока отключаю*/
-				content: "";
+			
+			.burger-line{
+				position: absolute;
+				top: 6px;
+				right: 8px;
+				width: 35px;
+				height: 2px;
+				background-color: #fff;
+				transition: .5s all;
+			}
+			
+			.second, .third{
+				top: 16px;
+			}
+			
+			.fourth{
+				top: 26px;
+			}
+			
+			.main-menu{
+				display: flex;
+				position: absolute;
+				height: 35px;
+				bottom: 0;
+				left: 0;
+				transform: translateX(-100%); 
+				max-height: 0;
+				font-size: 0;
+				overflow: hidden;
+				transition: .3s linear; 
+			}
+			
+			.main-menu__item{
 				display: block;
 				width: 100%;
-				height: 3px;
-				background-color: #fce38a;
-				position: absolute; /* без него строка будет прыгать*/
-				top: 100%; 
-				left: 0;
-				right: 0;
-				opacity: 0;/*видимость этого блока*/
-				transition: opacity .2s linear;
+				padding: 10px;
+				color: #fff;
+				opacity: 0.7;
+				text-decoration: none;
+				text-transform: uppercase;
+				background-color: rgba(100,100,100,.9);
 			}
-			.header-navigation__item:hover{  /*меняю только цвет*/
+			
+			a:hover{
+				background-color: rgba(0,0,0,.9);
+			}
+			
+			#check-menu:checked ~ .main-menu{
+				max-height: 100%;
+				font-size: 18px;	
+
+				/* display: flex;
+				flex-direction: column;
+				bottom: -150px; 
+				для адаптива
+				*/
+			}
+			
+			#check-menu:checked ~ .first{
+				display: none;
+			}
+			
+			#check-menu:checked ~ .second{
+				transform: rotate(45deg);
+			}
+			
+			#check-menu:checked ~ .third{
+				transform: rotate(-45deg);
+			}
+			
+			#check-menu:checked ~ .fourth{
+				display: none;
+			}
+			@media (max-width: 768px){
+				.main-menu__item{
+					font-size: 12px;
+				}
+				.main-menu{
+					margin-top: 500px;
+				}
+				.header__logo{
+					margin-top: 50px;
+				}
 				
-				color: #fce38a;
-				transition: color .2s linear;
 			}
-			.header-navigation__item:hover:after{/*так же включаю видимость у блока с подчёркиванием*/
-				opacity: 1;
+			@media (max-width: 480px){
+				.main-menu__item{
+					font-size: 8px;
+				}
+				.main-menu{
+					margin-top: 500px;
+				}
+				.header__logo{
+					margin-top: 50px;
+				}
+				
 			}
+
+
+
+
+
+
 
 /* === General elements  === */
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
