@@ -74,6 +74,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;} /*Всё заголовк
 			border-radius: 2px;
 			padding: 8px 15px;
 			opacity: 0.6;
+			transition: .5s all;
 		}
 			.header__logo_first-letter{
 				
@@ -81,8 +82,27 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;} /*Всё заголовк
 				color: #fc6744;
 				font-family: "Open Sans";
 				font-weight: 600;
+				transition: .5s all;
 			}
+		.header__logo:hover{
 			
+			color: #ff5c36;
+			margin-left: 10px;
+			border: 3px solid #ff5c36;
+			border-radius: 2px;
+			padding: 8px 15px;
+			opacity: 0.6;
+			transition: .5s all;
+		}
+			.header__logo:hover  .header__logo_first-letter{
+				
+				opacity: 0.6;
+				color: #000000;
+				font-family: "Open Sans";
+				font-weight: 600;
+				transition: .5s all;
+			}
+
 
 		.layout{ /* макет */
 			padding: 15px 20px;
