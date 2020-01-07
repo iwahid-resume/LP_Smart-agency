@@ -345,6 +345,7 @@ body{
 				box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.22);
 				margin-bottom: 70px;
 				flex-grow: 1;
+				position: relative;
 			}
 			.gallery-item_1{
 				background-color: #4eb2f7;
@@ -373,6 +374,7 @@ body{
 					opacity: 0.75;
 				}
 				.gallery-item__button{
+					
 					display: flex;
 					background-color: white;
 					min-width: 80%;
@@ -381,6 +383,9 @@ body{
 					align-items: center;
 					justify-content: center;
 					
+					position: absolute;
+					bottom: -10%;
+
 					color: #000000;
 					font-family: "Open Sans";
 					font-size: 16px;
