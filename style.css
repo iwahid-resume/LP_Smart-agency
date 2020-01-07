@@ -49,23 +49,6 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;} /*Всё заголовки "в ноль", для перестройки под макет"
 /*--------------------*/
 
-
-/* === Breack-point (screen resolution) === */
-/* Так много точек только по тому, что у макета не было изначально мобильной и планшетной версии. Иначе, хватило бы 4 стандартных
-
-1200px
-1100px
-860px
-768px
-600px
-525px
-400px
-360px
-*/
-
-/* === Breack-point (screen resolution) (end)  === */
-
-
 /* === Header  === */
 .header{
 	width: 100%;
@@ -99,6 +82,17 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;} /*Всё заголовк
 				font-family: "Open Sans";
 				font-weight: 600;
 			}
+
+
+		.layout{
+			padding: 15px 20px;
+			background-color:#dddddd ;
+			color: #ff5c36;
+			position: fixed;
+			top:5px;
+			left: 5px;
+			z-index: 1000;
+		}
 		
 		/* кастомизация ссылок*/
 		.header-navigation{
