@@ -86,7 +86,7 @@
 
 	<!-- чётные секции этого лендинга белые, а не чётные серые. Обычно, каждой из секции я присваиваю цвет в CSS, но можно пойти и от обратного, создав единый class="white", присвоив ему белый цвет в CSS и добавляя его к необходимым секциям уже в html. Или всем чётным дочерним элементам body устанавливать фон белым. Подходов и принципов много, и это лишь пояснение о том, что они есть и я о них знаю.-->
 
-	<section class="working"> 
+	<section id="working" class="working"> 
 		<div class="working__container container">
 
 			<span class="working__title title">
@@ -151,7 +151,7 @@
 		</div>
 	</section>
 
-	<section class="featured">
+	<section id="featured" class="featured">
 		<div class="featured__container container">
 			<span class="feature__title title">
 				<span class="first-word">Featured</span>  Works
@@ -177,7 +177,7 @@
 	</section>
 
 	<!-- Весь нижестоящий блок можно было реализовать гораздо проще и аккуратней с помощью скриптов и галерей. Реализовано всё на чистых html+css только ради условия: обойтись без использования скриптов и сторонних плагинов -->
-	<section class="services">
+	<section id="services" class="services">
 		<div class="services__container container">
 			<span class="services__title title">
 				<span class="first-word">Services</span>  We Provide
@@ -259,9 +259,9 @@
 			</div>
 			
 		</div>
-	</section>
+	</section id="featured">
 
-	<section class="team">
+	<section id="team" class="team">
 		<div class="team__container container">
 			<span class="team__title title">
 				<span class="first-word">Team</span> Chinen & Skills
@@ -382,7 +382,7 @@
 			
 		</div>
 	</section> <!-- === team (end) === --> 
-	<section class="clients">
+	<section id="clients" class="clients">
 		<div class="clients__container container">
 			<span class="clients__title title">
 				<span class="first-word">Clients</span>  Said
@@ -429,7 +429,7 @@
 		</div>
 	</section>
 
-	<section class="profiles">
+	<section id="profiles" class="profiles">
 		<div class="profiles__container container">
 			
 			<div class="profiles__gallery">
