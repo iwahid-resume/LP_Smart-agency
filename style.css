@@ -82,9 +82,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;} /*Всё заголовк
 				font-family: "Open Sans";
 				font-weight: 600;
 			}
+			
 
-
-		.layout{
+		.layout{ /* макет */
 			padding: 15px 20px;
 			background-color:#dddddd ;
 			color: #ff5c36;
@@ -92,7 +92,15 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;} /*Всё заголовк
 			top:5px;
 			left: 5px;
 			z-index: 1000;
+			transition: .5s all;
 		}
+			.layout:hover{ /* макет */
+				padding: 20px 25px;
+				background-color:#ff5c36 ;
+				color: #333333;
+				
+				transition: .5s all;
+			}
 		
 		/* кастомизация ссылок*/
 		.header-navigation{
